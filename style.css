@@ -1,0 +1,56 @@
+body {
+ background-color: lightgreen;
+ padding: 30px;
+ font-family: sans-serif;
+ display: flex;
+ gap: 20px;
+ flex-direction: column;
+ height: 700px;
+}
+
+#count {
+ background-color: yellow;
+ padding: 10px 20px;
+ font-size: 1.5rem;
+ text-align: center;
+ border-radius: 30px;
+ 
+ 
+}
+
+.btn {
+ background: blue;
+ padding: 5px 20px;
+ font-size: 1rem;
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ color: white;
+ align-items: center;
+ gap: 10px;
+ border-radius: 30px;
+ 
+ 
+}
+
+button {
+ padding: 5px 20px;
+ width: 90px;
+ border-radius: 30px;
+}
+
+.table {
+ background: red;
+ border-radius: 20px;
+ display: flex;
+ justify-content: center;
+ gap: 20px;
+}
+
+#screen {
+ background-color: pink;
+ text-align: center;
+ font-size: 2rem;
+ border-radius: 30px;
+ 
+}
