@@ -3,18 +3,18 @@ let counter = Number(localStorage.getItem("counter1")) || 0;
 const count = document.getElementById("count");
 
 let result = Number(localStorage.getItem("result")) || 0;
- 
- const screen = document.getElementById("screen");
 
-screen.textContent = result; 
+const screen = document.getElementById("screen");
+
+screen.textContent = result;
 
 count.textContent = counter;
 
 function add() {
-  counter++;
-
-  count.innerHTML = counter;
-  localStorage.setItem("counter1", counter);
+ counter++;
+ 
+ count.innerHTML = counter;
+ localStorage.setItem("counter1", counter);
 }
 
 function minus() {
@@ -26,7 +26,7 @@ function minus() {
   
   count.innerHTML = counter;
   localStorage.setItem("counter1", counter);
-
+  
  }
 }
 
@@ -60,3 +60,17 @@ function cero() {
  localStorage.setItem("result", result);
 }
 
+
+
+// prevent zooming==========
+document.addEventListener("touchstart", function(event) {
+ if (event.touches.length > 1) {
+  event.preventDefault();
+ }
+}, { passive: false });
+
+document.addEventListener("touchmove", function(event) {
+ if (event.touches.length > 1) {
+  event.preventDefault();
+ }
+}, { passive: false });
