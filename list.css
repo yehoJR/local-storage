@@ -1,0 +1,26 @@
+h1 {
+ background: lightsalmon;
+ color: #000;
+ border-radius: 10px;
+ padding: 5px 20px;
+ text-align: center;
+}
+
+#element {
+ border-radius: 5px;
+ border: solid 2px black;
+ background: lightblue;
+ 
+}
+
+.inicio {
+margin-top: 2000px;
+text-decoration: none;
+background: blue;
+color: white;
+border-radius: 5px;
+padding: 5px 10px;
+
+ 
+ 
+}

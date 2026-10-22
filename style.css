@@ -73,5 +73,13 @@ button {
  text-align: center;
  font-size: 2rem;
  border-radius: 30px;
- 
+}
+
+.list {
+ width: fit-content;
+ background: green;
+ padding: 10px 10px;
+ border-radius: 15px;
+text-decoration: none; 
+color: white;
 }
