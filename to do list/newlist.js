@@ -13,6 +13,7 @@ try {
  if (Array.isArray(tareaGuardado)) {
   tasks = tareaGuardado;
  }
+ 
 } catch (error) {
  tasks = [];
 }
