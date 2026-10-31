@@ -45,3 +45,18 @@ btn.addEventListener("click", function() {
  input.value = "";
  input.focus();
 });
+
+// prevent zooming==========
+document.addEventListener("touchstart", function(event) {
+ if (event.touches.length > 1) {
+  event.preventDefault();
+ }
+ 
+}, { passive: false });
+
+document.addEventListener("touchmove", function(event) {
+ if (event.touches.length > 1) {
+  event.preventDefault();
+ }
+}, { passive: false });
+// ENDS HERE THE PREVENTION
