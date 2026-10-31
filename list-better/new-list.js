@@ -1,43 +1,63 @@
- const taskInput = document.getElementById("taskInput");
-    const addButton = document.getElementById("addButton");
-    const taskList = document.getElementById("taskList");
+const taskInput = document.getElementById("taskInput");
+const addButton = document.getElementById("addButton");
+const taskList = document.getElementById("taskList");
 
-    function addTask() {
-      const taskText = taskInput.value.trim();
 
-      if (taskText === "") {
-        taskInput.focus();
-        return;
-      }
+let tarea = [];
 
-      const li = document.createElement("li");
-      const span = document.createElement("span");
+const tareaGuardada = JSON.parse(
+  localStorage.getItem("save1") || "[]");
 
-      span.textContent = taskText;
+function guardarTarea() {
+  localStorage.setItem("save1", JSON.stringify(tarea));
+}
 
-      const deleteButton = document.createElement("button");
-      deleteButton.textContent = "Eliminar";
-      deleteButton.className = "delete-button";
-      deleteButton.type = "button";
+function mostrarEnpantalla() {
+  taskList.innerHTML = "";
 
-      deleteButton.addEventListener("click", () => {
-        li.remove();
-      });
+  const tareaTexto = taskInput.value.trim();
 
-      li.appendChild(span);
-      li.appendChild(deleteButton);
-      taskList.appendChild(li);
+if (tareaTexto === "") {
+  
+}
+}
 
-      taskInput.value = "";
-      taskInput.focus();
-    }
+function addTask() {
+  const taskText = taskInput.value.trim();
 
-    // Agregar con el botón de la pantalla
-    addButton.addEventListener("click", addTask);
+  if (taskText === "") {
+    taskInput.focus();
+    return;
+  }
 
-    // Agregar presionando Enter
-    taskInput.addEventListener("keydown", (event) => {
-      if (event.key === "Enter") {
-        addTask();
-      }
-    });
+  const li = document.createElement("li");
+  const span = document.createElement("span");
+
+  span.textContent = taskText;
+
+  const deleteButton = document.createElement("button");
+  deleteButton.textContent = "Eliminar";
+  deleteButton.className = "delete-button";
+  deleteButton.type = "button";
+
+  deleteButton.addEventListener("click", () => {
+    li.remove();
+  });
+
+  li.appendChild(span);
+  li.appendChild(deleteButton);
+  taskList.appendChild(li);
+
+  taskInput.value = "";
+  taskInput.focus();
+}
+
+// Agregar con el botón de la pantalla
+addButton.addEventListener("click", addTask);
+
+// Agregar presionando Enter
+taskInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    addTask();
+  }
+});
