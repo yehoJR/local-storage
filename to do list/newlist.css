@@ -1,3 +1,7 @@
+* {
+	/* border: red 2px solid */
+}
+
 body {
 	font-family: Arial, sans-serif;
 	background: #f1f5f9;
@@ -19,7 +23,7 @@ h1 {
 
 .input-container {
 	display: flex;
-	gap: 8px;
+	gap: 2px;
 }
 
 input {
@@ -49,14 +53,16 @@ li {
 	justify-content: space-between;
 	align-items: center;
 	gap: 10px;
-	margin-top: 12px;
-	padding: 10px;
+	margin: 12px 12px;
+	padding: 5px 5px;
 	background: #f8fafc;
 	border-radius: 6px;
 	overflow-wrap: anywhere;
+	border-color: green;
+
 }
 
-li span {
+span {
 	flex: 1;
 }
 
@@ -66,4 +72,28 @@ li span {
 
 .delete-button:hover {
 	background: #b91c1c;
+}
+
+
+.task-list {
+	max-width: 450px;
+	margin: auto;
+	padding: 10px 10px;
+	background: white;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px #00000015;
+	margin-top: 10px;
+	background-color: rgb(202, 236, 245);
+	display: flex;
+	flex: 1;
+	/* border-color: rgb(255, 0, 179); */
+
+}
+
+ul {
+	border-color: #1d4ed8;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 }
