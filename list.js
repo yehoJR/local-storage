@@ -10,7 +10,7 @@ btn.addEventListener("click", function() {
  
  if (taskText === "") {
   alert("escribe una tarea primero?");
-  return;
+  return;o
  }
  
  // crear el elemnto de la tarea==========
