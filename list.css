@@ -6,8 +6,9 @@ h1 {
  background: lightsalmon;
  color: #000;
  border-radius: 10px;
- padding: 5px 20px;
+ /* padding: 5px 20px; */
  text-align: center;
+ margin: 10px 20px;
 }
 
 
@@ -18,32 +19,63 @@ background: blue;
 color: white;
 border-radius: 5px;
 padding: 5px 10px;
+position: absolute;
+right: 28px;
+top: 22px;
 }
 
 #box {
- border: 1px solid black;
+ font-size: 25px;
 display: flex;
 flex-direction: column;
- 
+ margin-bottom: 30px;
+ padding: 20px 30px;
 }
 
 
-.container {
+.container-input {
   width: 100%;
-  max-width: 600px;
   margin: 0 auto;
-  padding: 10px;
   display: flex;
-  gap: 1px;
+  border: 2px solid black;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 #searchInput {
-  width: 50%;
-  max-width: 250px;
+  width: 90%;
   padding: 8px;
   box-sizing: border-box;
+  border: none;
+  overflow: cover;
 }
+
+#searchBtn {
+ background: blue;
+ color: white;
+ border: none;
+ overflow: cover;
+ border: solid 1px black;
+}
+
 .eliminar {
- font-size: 10px;
- 
+ font-size: 15px;
+ background: blue;
+ border-radius: 10px;
+ color: white;
+
+}
+
+.completo {
+  background: mediumvioletred;
+  padding: 0 5px;
+  border-radius: 10px;
+}
+
+.todo-contain {
+ box-sizing: border-box;
+ margin: 20px 20px;
+ padding: 30px;
+ border: solid 2px whitesmoke;
+ border-radius: 10px;
 }
