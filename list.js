@@ -4,7 +4,11 @@ const btn = document.getElementById("searchBtn");
 
 const box = document.getElementById("box");
 
+
+let task = [];
+
 // empezo desde aqui ==========================
+
 btn.addEventListener("click", function() {
  const taskText = input.value.trim();
  
@@ -14,6 +18,11 @@ btn.addEventListener("click", function() {
  }
  
  // crear el elemnto de la tarea==========
+ function displayTask() {
+	box.innerHTML = "";
+
+ 
+ task.forEach((task, index) => {
  const li = document.createElement("li");
  
  // crear el texto
@@ -35,13 +44,18 @@ btn.addEventListener("click", function() {
   li.remove();
  });
  
+ 
  // ageragar elemento a la lista==========
  
  li.appendChild(span);
  li.appendChild(deletebtn);
- box.appendChild(li);
+ box.appendChild(task);
+ });
  
  // limpiar el input======
  input.value = "";
  input.focus();
 });
+}
+
+displayTask();
